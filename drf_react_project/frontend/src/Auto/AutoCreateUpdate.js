@@ -8,7 +8,10 @@ class  AutoCreateUpdate  extends  Component {
 	constructor(props) {
 		super(props);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.setTextInputRef = element => {      this.textInput = element;    };
 	}
+
+
 
 	componentDidMount(){
 	const { match: { params } } =  this.props;
@@ -72,19 +75,19 @@ class  AutoCreateUpdate  extends  Component {
           <div className="form-group">
             <label>
               Title:</label>
-              <input className="form-control" type="text" ref='title' />
+              <input className="form-control" type="text" ref={this.setTextInputRef} />
 
             <label>
               Mark:</label>
-              <input className="form-control" type="text" ref='mark'/>
+              <input className="form-control" type="text" ref={this.setTextInputRef}/>
 
             <label>
               Year:</label>
-              <input className="form-control" type="text" ref='year' />
+              <input className="form-control" type="text" ref={this.setTextInputRef} />
 
             <label>
               Mileage:</label>
-              <input className="form-control" type="text" ref='mileage' />
+              <input className="form-control" type="text" ref={this.setTextInputRef} />
 
             <input className="btn btn-primary" type="submit" value="Submit" />
             </div>
