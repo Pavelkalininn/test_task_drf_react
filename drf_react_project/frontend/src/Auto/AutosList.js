@@ -19,7 +19,8 @@ class  AutosList  extends  Component {
 
     componentDidMount() {
         var  self  =  this;
-        autosService.getAuto().then(function (result) {
+        autosService.getAutos().then(function (result) {
+            console.log( result )
             self.setState({ autos:  result.data, nextPageURL:  result.nextlink})
         });
     }
@@ -44,7 +45,7 @@ class  AutosList  extends  Component {
     render() {
 
         return (
-        <div  className="autos--list">
+        <div  className="content">
             <table  className="table">
                 <thead  key="thead">
                 <tr>

@@ -11,8 +11,6 @@ class  AutoCreateUpdate  extends  Component {
 		this.setTextInputRef = element => {      this.textInput = element;    };
 	}
 
-
-
 	componentDidMount(){
 	const { match: { params } } =  this.props;
 	if(params  &&  params.pk)

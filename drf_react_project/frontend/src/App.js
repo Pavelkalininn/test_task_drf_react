@@ -1,4 +1,4 @@
-import  React, { Component } from  'react';
+import  { React } from  'react';
 import { BrowserRouter, Route, Routes } from  'react-router-dom'
 import  AutosList  from  './Auto/AutosList'
 import  AutoCreateUpdate  from  './Auto/AutoCreateUpdate'
@@ -29,14 +29,29 @@ const  BaseLayout  = () => (
 )
 
 
-class  App  extends  Component {
+function  App() {
 
-    render() {
-        return (
-        <BrowserRouter>
-            <BaseLayout/>
-        </BrowserRouter>
-        );
-    }
+//    const makeAPICall = async (url) => {
+//        try {
+//          const response = await fetch(url, {mode:'cors'});
+//          const data = await response.json();
+//          const result = await data.results;
+//          //console.log( result )
+//          return data;
+//        }
+//        catch (e) {
+//          console.log(e)
+//        }
+//    }
+//    useEffect(() => {
+//        makeAPICall('http://localhost:8000/api/v1/cars/');
+//    }, [])
+
+    return (
+    <BrowserRouter>
+        <BaseLayout/>
+    </BrowserRouter>
+    );
+
 }
 export  default  App;
